@@ -17,6 +17,8 @@ Overview
 
     Ran into a timeout issue with the regional apt archive mirror (ke.archive.ubuntu.com), so I updated /etc/apt/sources.list.d/ubuntu.sources to point to the main global mirrors.
 
+     <img width="951" height="612" alt="image" src="https://github.com/user-attachments/assets/d2238179-fcc5-4e56-983d-422db33dbf1a" />
+
     Did a full system upgrade and installed the latest kernel update (6.8.0-146), then rebooted the server.
 
 **2. Installing the Wazuh Agent**
