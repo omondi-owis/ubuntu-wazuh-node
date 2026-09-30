@@ -41,6 +41,9 @@ sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 
+<img width="954" height="414" alt="image" src="https://github.com/user-attachments/assets/531b5566-3d5c-42a3-8c99-c06de1621182" />
+
+
 To check if everything's running smoothly:
 Bash
 
