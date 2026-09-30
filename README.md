@@ -3,23 +3,23 @@
 Documentation and notes for setting up an Ubuntu server lab node and connecting it to a Wazuh SIEM manager.
 Overview
 
-    OS: Ubuntu 24.04 LTS (Kernel 6.8.0-146-generic)
+OS: Ubuntu 24.04 LTS (Kernel 6.8.0-146-generic)
 
-    SIEM: Wazuh Agent v4.14.7
+SIEM: Wazuh Agent v4.14.7
 
-    Access: SSH with Ed25519 keys
+Access: SSH with Ed25519 keys
 
-  What I Did
+What I Did
   
 **1. Initial Setup & System Updates****
 
-    Connected from my Kali machine via SSH using an SSH key.
+Connected from my Kali machine via SSH using an SSH key.
 
-    Ran into a timeout issue with the regional apt archive mirror (ke.archive.ubuntu.com), so I updated /etc/apt/sources.list.d/ubuntu.sources to point to the main global mirrors.
+Ran into a timeout issue with the regional apt archive mirror (ke.archive.ubuntu.com), so I updated /etc/apt/sources.list.d/ubuntu.sources to point to the main global mirrors.
      
-     <img width="951" height="612" alt="image" src="https://github.com/user-attachments/assets/76c8203b-4163-4523-9f6c-5627737465ce" />
+<img width="951" height="612" alt="image" src="https://github.com/user-attachments/assets/76c8203b-4163-4523-9f6c-5627737465ce" />
  
-    Did a full system upgrade and installed the latest kernel update (6.8.0-146), then rebooted the server.
+Did a full system upgrade and installed the latest kernel update (6.8.0-146), then rebooted the server.
 
 **2. Installing the Wazuh Agent**
 
@@ -37,9 +37,9 @@ sudo WAZUH_MANAGER="10.145.2.147" apt-get install -y wazuh-agent
 Enabled and started the service to make sure it runs on boot:
 Bash
 
-sudo systemctl daemon-reload
-sudo systemctl enable wazuh-agent
-sudo systemctl start wazuh-agent
+    sudo systemctl daemon-reload
+    sudo systemctl enable wazuh-agent
+    sudo systemctl start wazuh-agent
 
 <img width="954" height="414" alt="image" src="https://github.com/user-attachments/assets/531b5566-3d5c-42a3-8c99-c06de1621182" />
 
